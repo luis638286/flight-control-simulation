@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 // one sample from the inertial measurement unit
 struct ImuSample {
@@ -15,13 +16,13 @@ struct attitude {
 // how the system interprets the stick channels
 enum class Mode { Manual, Stabilised };
 
-// one frame from the receiver: stick positions, not physical units.
+// one frame from the receiver: stick positions
 struct ReceiverFrame {
     float roll = 0.0f;      // -1 .. +1   right stick, horizontal
     float pitch = 0.0f;     // -1 .. +1   right stick, vertical
     float yaw = 0.0f;       // -1 .. +1   left stick, horizontal
     float throttle = 0.0f;  //  0 .. +1   left stick, vertical
-    Mode  modeSwitch = Mode::Manual;
+    Mode  modeSwitch = Mode::Manual; 
 };
 
 // what the controller asks of the airframe, before mixing
@@ -34,4 +35,11 @@ struct Demand {
 struct MotorCommands {
     float frontLeft = 0.0f, frontRight = 0.0f;
     float rearLeft = 0.0f,  rearRight = 0.0f;      // each 0 .. +1
+};
+
+// gains for one PID loop
+struct PidGains {
+    float kp = 0.0f;
+    float ki = 0.0f;
+    float kd = 0.0f;
 };
