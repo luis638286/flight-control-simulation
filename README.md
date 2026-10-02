@@ -82,7 +82,7 @@ single-input loops, which is the assumption the controller's structure rests on.
 ## Status
 
 - [x] Simulated clock and fixed-rate loop
-- [ ] PID controller with anti-windup
+- [x] PID controller with anti-windup
 - [ ] Motor mixer
 - [ ] Physics model
 - [ ] HAL interfaces and simulated devices
