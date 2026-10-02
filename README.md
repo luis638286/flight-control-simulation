@@ -111,3 +111,10 @@ single-input loops, which is the assumption the controller's structure rests on.
 
 - [`docs/sources.md`](docs/sources.md) — learning sources and where each one
   informed the design
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+> This is an educational project. It has never been flown, and is not intended
+> for use on a real aircraft.
